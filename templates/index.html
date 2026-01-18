@@ -4,16 +4,57 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        h6 {
+            font-size: 20px
+        }
+
         .h2-text {
             color:red
+        }
+        .h6-text {
+            color: yellow
+        }
+
+        #h1-text-id {
+            font-size: 75px
+        }
+
+        div.python > a {
+            color: green
+        }
+
+        ul li {
+            color: green
+        }
+
+        input[type="text"] {
+            background-color: blue
+        }
+
+        a:hover {
+            color: red
+        }
+
+        input[type="text"]:hover {
+            background-color: green
+        }
+
+        li::marker {
+            color:red
+        }
+
+        ul > li:nth-child(2) {
+            color: blue
         }
     </style>
 </head>
 <body>
-<div>
-    <h1 id="00012931">H1 text</h1>
+<div class="python">
+    <h1 id="h1-text-id">H1 text</h1>
+    <h1>H1 text 2</h1>
+    <h1>H11 text 2</h1>
     <h2 class="h2-text">H2 text</h2>
-    <h6 class="h2-text">H6 text</h6>
+    <h6 class="h2-text h6-text">H6 text</h6>
     <p>dolore ad nisi sed ad <span style="color: green">pariatur</span> id cillum et esse ipsum dolore et consectetur
         mollit in est officia mollit anim amet dolor cupidatat culpa culpa
     </p>
@@ -57,6 +98,22 @@
         </tr>
         </tbody>
     </table>
+    <div class="nth">
+        <p>1</p>
+        <p>2</p>
+        <h6>3</h6>
+        <h5>4</h5>
+        <p>5</p>
+    </div>
+</div>
+<div class="java-script">
+    <h2 class="h2-text">H2 text</h2>
+    <a href="https://playwright.dev/python/" target="_blank">JavaScript</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
 </div>
 </body>
 </html>
