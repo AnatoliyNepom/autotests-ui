@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 import pytest
 
+
 @pytest.mark.regression
 @pytest.mark.registration
 def test_successful_registration():
