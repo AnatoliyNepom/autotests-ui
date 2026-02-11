@@ -7,8 +7,8 @@ class CreateCoursePage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.create_course_title = page.get_by_test_id('courses-list-toolbar-title-text')
-        self.create_course_button = page.get_by_test_id('courses-list-toolbar-create-course-button')
+        self.create_course_title = page.get_by_test_id('create-course-toolbar-title-text')
+        self.create_course_button = page.get_by_test_id('create-course-toolbar-create-course-button')
 
         self.preview_image = page.get_by_test_id('create-course-preview-image-upload-widget-preview-image')
         self.preview_empty_view_icon = page.get_by_test_id('create-course-preview-empty-view-icon')
