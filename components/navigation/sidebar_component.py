@@ -13,7 +13,7 @@ class SideBarComponent(BaseComponent):
         self.courses_list_item = SidebarListItemComponent(page, 'courses')
         self.dashboard_list_item = SidebarListItemComponent(page, 'dashboard')
 
-    def check_visible(self, title: str):
+    def check_visible(self):
         self.logout_list_item.check_visible('Logout')
         self.courses_list_item.check_visible('Courses')
         self.dashboard_list_item.check_visible('Dashboard')
