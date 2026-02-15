@@ -19,7 +19,7 @@ class CreateCourseExerciseFormComponent(BaseComponent):
         )
         self.title_input = Input(page, 'create-course-exercise-form-title-{index}-input', 'Title')
         self.description_input = Input(
-            page, f'create-course-exercise-form-description-{index}-input', 'Description'
+            page, 'create-course-exercise-form-description-{index}-input', 'Description'
         )
 
     def click_delete_button(self, index: int):
