@@ -57,3 +57,42 @@ class TestCourses:
             max_score='100',
             min_score='10'
         )
+
+    def test_edit_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
+        create_course_page.visit('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
+        create_course_page.create_course_form.fill(
+            title = 'JavaScript',
+            estimated_time = '12 weeks',
+            description = 'JS basic course',
+            max_score = '500',
+            min_score = '5'
+        )
+        create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
+        create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
+        create_course_page.toolbar_view.click_create_course_button()
+
+        courses_list_page.course_view.check_visible(
+            index = 0,
+            title = 'JavaScript',
+            estimated_time = '12 weeks',
+            max_score = '500',
+            min_score = '5'
+        )
+        courses_list_page.course_view.menu.click_edit(index = 0)
+
+        create_course_page.create_course_form.fill(
+            title = 'Python',
+            estimated_time = '15 weeks',
+            description = 'Python basic course',
+            max_score = '1000',
+            min_score = '10'
+        )
+        create_course_page.toolbar_view.click_create_course_button()
+
+        courses_list_page.course_view.check_visible(
+            index = 0,
+            title = 'Python',
+            estimated_time = '15 weeks',
+            max_score = '1000',
+            min_score = '10'
+        )

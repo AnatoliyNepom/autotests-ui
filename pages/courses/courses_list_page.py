@@ -22,4 +22,3 @@ class CoursesListPage(BasePage):
             title = 'There is no results',
             description = 'Results from the load test pipeline will be displayed here'
         )
-
