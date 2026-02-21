@@ -1,6 +1,7 @@
-from pages.dashboard.dashboard_page import DashboardPage
 import pytest
 import allure
+
+from pages.dashboard.dashboard_page import DashboardPage
 from tools.allure.tags import AllureTag
 from tools.allure.epics import AllureEpic
 from tools.allure.features import AllureFeature

@@ -1,7 +1,6 @@
 import pytest
 import allure
 
-from playwright.sync_api import expect, Page
 from pages.authentification.login_page import LoginPage
 from pages.authentification.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage

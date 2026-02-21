@@ -1,6 +1,6 @@
 import pytest
 import allure
-from playwright.sync_api import expect, Page
+
 from pages.courses.courses_list_page import CoursesListPage
 from pages.courses.create_course_page import CreateCoursePage
 from tools.allure.tags import AllureTag
