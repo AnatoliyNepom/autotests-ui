@@ -47,9 +47,14 @@ jobs:
           gh_pages: gh-pages
           allure_history: allure-history
 
+      - name: Fix permissions
+          if: always()
+          run: sudo chown -R $USER:$USER .
+
       - name: Deploy report to Github Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-history
           publish_branch: gh-pages
+          force_orphan: true
