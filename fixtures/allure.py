@@ -6,5 +6,3 @@ from tools.allure.environment import create_allure_environment_file
 def save_allure_environment_file():
     yield
     create_allure_environment_file()
-
-#test
